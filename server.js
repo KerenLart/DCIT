@@ -1,13 +1,18 @@
-const express = require("express")
+const express = require('express')
 const app = express()
-
-//routes
+const port = 3000
+const mongoose = require("mongoose")
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+  res.send('Hello World!')
+})
+
+
+app.get('/blog', (req, res) => {
+    res.send('Hello Blog! My name is keren')
   })
 
-
-app.listen(3000,()=> {
-    console.log("Node Api is running on port 3000")
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
 })
+
